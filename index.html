@@ -54,6 +54,7 @@
                     <a href="#services-fire" class="text-gray-600 hover:text-brand-blue font-bold text-xs lg:text-sm">消防設備</a>
                     <a href="#cases" class="text-gray-600 hover:text-brand-blue font-bold text-xs lg:text-sm">施工事例</a>
                     <a href="#cases" class="text-gray-600 hover:text-brand-blue font-bold text-xs lg:text-sm">ブログ</a>
+                    <a href="#contact-form" class="text-gray-600 hover:text-brand-blue font-bold text-xs lg:text-sm">お問い合わせ</a>
                 </nav>
                 <!-- 連絡先CTA -->
                 <div class="hidden sm:flex flex-col items-end">
@@ -297,7 +298,7 @@
     </section>
 
     <!-- ==========================================
-         お問い合わせ (CTA)
+         お問い合わせ (CTA - お電話案内)
     =========================================== -->
     <section class="bg-brand-blue py-16 relative overflow-hidden">
         <!-- 背景装飾（雷マーク風） -->
@@ -320,6 +321,73 @@
                     <svg class="w-10 h-10 md:w-12 md:h-12 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     <a href="tel:090-4001-9613" class="text-4xl md:text-6xl font-black tracking-wider hover:opacity-80 transition">090-4001-9613</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         お問い合わせフォーム
+    =========================================== -->
+    <section id="contact-form" class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black text-gray-800 mb-4">WEBからの<span class="text-brand-blue">お問い合わせ</span></h2>
+                <p class="text-gray-600">以下のフォームにご入力の上、「送信する」ボタンをクリックしてください。<br class="hidden md:inline">内容を確認次第、担当者よりご連絡させていただきます。</p>
+            </div>
+
+            <div class="bg-gray-50 p-6 md:p-10 rounded-2xl border border-gray-200 shadow-sm">
+                <form action="#" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-bold text-gray-700 mb-1">お名前 <span class="text-red-500 text-xs ml-1">必須</span></label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="立川 太郎">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-bold text-gray-700 mb-1">会社名（法人の場合）</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="株式会社〇〇">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-gray-700 mb-1">メールアドレス <span class="text-red-500 text-xs ml-1">必須</span></label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="info@example.com">
+                        </div>
+                        <div>
+                            <label for="tel" class="block text-sm font-bold text-gray-700 mb-1">電話番号 <span class="text-red-500 text-xs ml-1">必須</span></label>
+                            <input type="tel" id="tel" name="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="090-XXXX-XXXX">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">ご相談の種別 <span class="text-red-500 text-xs ml-1">必須</span></label>
+                        <div class="flex flex-col sm:flex-row flex-wrap gap-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="category" value="elec" class="w-5 h-5 text-brand-blue border-gray-300 focus:ring-brand-blue">
+                                <span class="ml-2 text-gray-700 font-medium">お家の電気工事（一般向け）</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="category" value="fire" class="w-5 h-5 text-brand-darkblue border-gray-300 focus:ring-brand-darkblue">
+                                <span class="ml-2 text-gray-700 font-medium">消防設備点検（法人向け）</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="category" value="other" class="w-5 h-5 text-gray-600 border-gray-300 focus:ring-gray-500">
+                                <span class="ml-2 text-gray-700 font-medium">その他</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-bold text-gray-700 mb-1">お問い合わせ内容 <span class="text-red-500 text-xs ml-1">必須</span></label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="現在の状況やご希望の施工内容、お困りごとなどを詳しくご記入ください。"></textarea>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <button type="submit" class="bg-brand-blue hover:bg-blue-600 text-white font-bold py-4 px-12 rounded-full shadow-lg transition transform hover:-translate-y-1 text-lg w-full md:w-auto">
+                            入力内容を確認して送信する
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
